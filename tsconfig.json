@@ -2,41 +2,35 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "strict": false,
-    "jsx": "preserve",
-    "importHelpers": true,
     "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "skipLibCheck": true,
+    "importHelpers": true,
+    "jsx": "react-jsx",
     "esModuleInterop": true,
-    "isolatedModules": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
-    "baseUrl": ".",
-    "allowJs": true,
-    "resolveJsonModule": true, // 包含导入的模块。json的扩展
-    "lib": ["dom", "esnext"],
-    "incremental": true,
+    "baseUrl": "./",
+    "strict": true,
     "paths": {
-      "/@/*": ["src/*"],
-      "/#/*": ["types/*"]
+      "@/*": ["src/*"],
+      "@@/*": ["src/.umi/*"]
     },
-    "types": ["node", "vite/client"],
-    "typeRoots": ["./node_modules/@types/", "./types"]
+    "allowSyntheticDefaultImports": true
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "src/utils/path.js",
-    "types/**/*.d.ts",
-    "types/**/*.ts",
-    "types/global.d.ts",
-    "types/shims-tsx.d.ts",
-    "types/shims-vue.d.ts",
-    "mock/asyncRoutes.ts"
+    "mock/**/*",
+    "src/**/*",
+    "config/**/*",
+    ".umirc.ts",
+    "typings.d.ts"
   ],
-  "exclude": ["node_modules", "dist", "**/*.js"]
+  "exclude": [
+    "node_modules",
+    "lib",
+    "es",
+    "dist",
+    "typings",
+    "**/__test__",
+    "test",
+    "docs",
+    "tests"
+  ]
 }
