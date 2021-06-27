@@ -5,4 +5,5 @@ export default defineConfig({
     type: 'none',
   },
   fastRefresh: {},
+  mfsu: {},
 });
